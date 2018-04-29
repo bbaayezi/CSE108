@@ -2,7 +2,7 @@ import socket
 import threading
 import sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("0.0.0.0", 8001))
+s.bind(("10.8.23.53", 8001))
 s.listen(2)
 conn, addr = s.accept()
 print("connected from ", addr)
