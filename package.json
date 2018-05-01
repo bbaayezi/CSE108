@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bbaayezi/CSE108/issues"
   },
-  "homepage": "https://github.com/bbaayezi/CSE108#readme"
+  "homepage": "https://github.com/bbaayezi/CSE108#readme",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
 }
