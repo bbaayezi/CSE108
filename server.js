@@ -16,10 +16,35 @@ var server2 = http.createServer(function(req, res) {
     res.end('Sample Message. Served by port 3001')
 }).listen(3001, '127.0.0.1');
 
+var server3 = http.createServer(function(req, res) {
+    console.log('request for: ' + req.url + '::3002');
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+    });
+    res.end('Sample Message. Served by port 3002')
+}).listen(3001, '127.0.0.1');
+
+var server4 = http.createServer(function(req, res) {
+    console.log('request for: ' + req.url + '::3003');
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+    });
+    res.end('Sample Message. Served by port 3003')
+}).listen(3001, '127.0.0.1');
+
+
 server1.once('listening', function() {
     console.log('Server running at 127.0.0.1::3000')
 })
 
 server2.once('listening', function() {
     console.log('Server running at 127.0.0.1::3001')
+})
+
+server3.once('listening', function() {
+    console.log('Server running at 127.0.0.1::3002')
+})
+
+server4.once('listening', function() {
+    console.log('Server running at 127.0.0.1::3003')
 })
